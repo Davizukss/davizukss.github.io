@@ -4,12 +4,57 @@
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
+    user-select: none;
 }
 body{
-    background-color: #34eb5b;
+    background-color: aliceblue;
 }
-
-.btn_jogar, .quiz_box, .result_box{
+.box_name{
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    max-width: 95vw;
+    height: 50%;
+    width: 100%;
+    background-color: #ababaa;
+}
+.nome_user{
+    margin-top: 5vh;
+    border: 1px solid black;
+    padding: 3vh 3vh;;
+    opacity: 1;
+    height: auto;
+    width: 100%;
+    max-width: 70vw;
+    border-radius: 10px;
+}
+.bar{
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    background-color: #ccc;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    max-height: 3vh;
+    max-width: 37vw;
+    margin-top: 5px;
+}
+.barraAtiva{
+    pointer-events: auto;
+    opacity: 1;
+}
+.bar div{
+    transition: 1s ease-out;
+    font-size: 1rem;
+    color: white;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #222;
+}
+.box_name, .quiz_box, .result_box,.btn_jogar{
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -17,17 +62,15 @@ body{
 }
 
 .btn_jogar{
-    pointer-events: auto;
+    margin-top: 2vh;
     opacity: 1;
-    text-align: center;
-    align-items: center;
     height: auto;
     width: 100%;
     max-width: 50vw;
     border-radius: 5px;
 }
 .btn_jogar button{
-    color: #34eb5b;
+    color: #000000;
     font-size: 30px;
     font-weight: 500;
     padding: 15px 30px;
@@ -68,6 +111,10 @@ body{
 .quiz_box section .listaq{
     padding: 20px 0;
     display: block;
+}
+.userAtivo{
+    opacity: 0;
+    pointer-events: none;
 }
 .quiz_box .listaq .opcao{
     height: 10vh;
@@ -161,4 +208,10 @@ body{
 .resultAtivo{
     opacity: 1;
     pointer-events: auto;
+}
+
+@media (max-height: 620px){
+    .quiz_box{
+        height: 90%;
+    }
 }
