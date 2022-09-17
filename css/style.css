@@ -16,7 +16,7 @@ body{
     max-width: 95vw;
     height: 50%;
     width: 100%;
-    background-color: #ababaa;
+    background-color: white;
 }
 .nome_user{
     margin-top: 5vh;
@@ -70,6 +70,7 @@ body{
     border-radius: 5px;
 }
 .btn_jogar button{
+    background-color: green;
     color: #000000;
     font-size: 30px;
     font-weight: 500;
